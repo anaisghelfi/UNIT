@@ -1,0 +1,4 @@
+RewriteEngine on
+
+RewriteRule ^([a-zA-Z0-9\-\_\/]*)-([0-9]*)$ index.php?page=$1&id=$2&%{QUERY_STRING} [QSA]
+RewriteRule ^([a-zA-Z0-9\-\_\/]*)$ index.php?page=$1&%{QUERY_STRING} [L,QSA]
